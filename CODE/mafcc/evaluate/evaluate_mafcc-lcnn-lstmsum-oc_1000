@@ -1,0 +1,5 @@
+file_path:  output_testset_mafcc-lcnn-lstmsum-oc_1000
+Score file: output_testset_mafcc-lcnn-lstmsum-oc_1000
+mintDCF: 0.0905
+EER: 2.951%
+Threshold: 0.999573

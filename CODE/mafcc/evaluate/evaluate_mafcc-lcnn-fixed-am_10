@@ -1,0 +1,5 @@
+file_path:  output_testset_mafcc-lcnn-fixed-am_10
+Score file: output_testset_mafcc-lcnn-fixed-am_10
+mintDCF: 0.1361
+EER: 8.797%
+Threshold: 0.784321
