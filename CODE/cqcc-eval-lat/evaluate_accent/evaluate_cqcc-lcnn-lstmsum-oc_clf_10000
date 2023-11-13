@@ -1,0 +1,6 @@
+file_path:  output_testset_cqcc-lcnn-lstmsum-oc_10000
+accent:  clf
+Score file: output_testset_cqcc-lcnn-lstmsum-oc_10000
+mintDCF: 0.8415
+EER: 37.439%
+Threshold: 0.999495

@@ -1,0 +1,6 @@
+file_path:  output_testset_cqcc-lcnn-attention-p2s_100000
+accent:  arm
+Score file: output_testset_cqcc-lcnn-attention-p2s_100000
+mintDCF: 0.6504
+EER: 20.037%
+Threshold: 0.998611

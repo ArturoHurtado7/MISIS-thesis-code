@@ -1,0 +1,6 @@
+file_path:  output_testset_cqcc-lcnn-fixed-sig_100000
+accent:  arm
+Score file: output_testset_cqcc-lcnn-fixed-sig_100000
+mintDCF: 0.6882
+EER: 42.075%
+Threshold: 17.364660

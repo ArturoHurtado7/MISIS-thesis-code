@@ -1,0 +1,6 @@
+file_path:  output_testset_cqcc-lcnn-fixed-oc_1
+accent:  clm
+Score file: output_testset_cqcc-lcnn-fixed-oc_1
+mintDCF: 0.3379
+EER: 16.326%
+Threshold: 0.813738

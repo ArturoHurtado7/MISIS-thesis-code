@@ -1,0 +1,5 @@
+file_path:  output_testset_cqcc-lcnn-attention-am_10
+Score file: output_testset_cqcc-lcnn-attention-am_10
+mintDCF: 0.7943
+EER: 40.529%
+Threshold: 0.810034
