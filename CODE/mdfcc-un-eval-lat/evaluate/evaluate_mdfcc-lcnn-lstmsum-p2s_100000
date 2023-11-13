@@ -1,0 +1,5 @@
+file_path:  output_testset_mdfcc-lcnn-lstmsum-p2s_100000
+Score file: output_testset_mdfcc-lcnn-lstmsum-p2s_100000
+mintDCF: 0.0031
+EER: 0.104%
+Threshold: 0.329509

@@ -1,0 +1,5 @@
+file_path:  output_testset_mdfcc-lcnn-attention-p2s_10
+Score file: output_testset_mdfcc-lcnn-attention-p2s_10
+mintDCF: 0.0038
+EER: 0.146%
+Threshold: 0.335323
