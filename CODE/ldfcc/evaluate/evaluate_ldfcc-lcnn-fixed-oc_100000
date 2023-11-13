@@ -1,0 +1,5 @@
+file_path:  output_testset_ldfcc-lcnn-fixed-oc_100000
+Score file: output_testset_ldfcc-lcnn-fixed-oc_100000
+mintDCF: 0.0769
+EER: 3.017%
+Threshold: 0.999202

@@ -1,0 +1,6 @@
+file_path:  output_testset_ldfcc-lcnn-fixed-oc_100
+accent:  pem
+Score file: output_testset_ldfcc-lcnn-fixed-oc_100
+mintDCF: 0.5065
+EER: 15.490%
+Threshold: -0.769832

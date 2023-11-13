@@ -1,0 +1,6 @@
+file_path:  output_testset_ldfcc-lcnn-lstmsum-am_100000
+accent:  arf
+Score file: output_testset_ldfcc-lcnn-lstmsum-am_100000
+mintDCF: 0.5011
+EER: 31.734%
+Threshold: 0.814299

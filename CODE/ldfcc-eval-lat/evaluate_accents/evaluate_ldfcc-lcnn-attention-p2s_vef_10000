@@ -1,0 +1,6 @@
+file_path:  output_testset_ldfcc-lcnn-attention-p2s_10000
+accent:  vef
+Score file: output_testset_ldfcc-lcnn-attention-p2s_10000
+mintDCF: 0.2060
+EER: 14.669%
+Threshold: 0.779511

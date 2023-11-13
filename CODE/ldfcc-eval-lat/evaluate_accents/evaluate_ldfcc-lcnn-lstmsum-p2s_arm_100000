@@ -1,0 +1,6 @@
+file_path:  output_testset_ldfcc-lcnn-lstmsum-p2s_100000
+accent:  arm
+Score file: output_testset_ldfcc-lcnn-lstmsum-p2s_100000
+mintDCF: 1.0000
+EER: 56.467%
+Threshold: 0.912353

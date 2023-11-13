@@ -1,0 +1,6 @@
+file_path:  output_testset_ldfcc-lcnn-fixed-p2s_1000
+accent:  vem
+Score file: output_testset_ldfcc-lcnn-fixed-p2s_1000
+mintDCF: 0.9029
+EER: 45.775%
+Threshold: 0.000182

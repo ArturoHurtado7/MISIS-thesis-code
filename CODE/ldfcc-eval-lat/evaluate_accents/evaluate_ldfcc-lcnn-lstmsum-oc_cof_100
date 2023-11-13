@@ -1,0 +1,6 @@
+file_path:  output_testset_ldfcc-lcnn-lstmsum-oc_100
+accent:  cof
+Score file: output_testset_ldfcc-lcnn-lstmsum-oc_100
+mintDCF: 0.3576
+EER: 24.479%
+Threshold: -0.916531

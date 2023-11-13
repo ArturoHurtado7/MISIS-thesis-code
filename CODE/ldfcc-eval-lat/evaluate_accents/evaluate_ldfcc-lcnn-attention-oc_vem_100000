@@ -1,0 +1,6 @@
+file_path:  output_testset_ldfcc-lcnn-attention-oc_100000
+accent:  vem
+Score file: output_testset_ldfcc-lcnn-attention-oc_100000
+mintDCF: 0.9874
+EER: 49.025%
+Threshold: -0.989308

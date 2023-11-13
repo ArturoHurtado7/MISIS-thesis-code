@@ -1,0 +1,6 @@
+file_path:  output_testset_ldfcc-lcnn-lstmsum-am_1000
+accent:  pef
+Score file: output_testset_ldfcc-lcnn-lstmsum-am_1000
+mintDCF: 0.1635
+EER: 6.123%
+Threshold: 0.471367

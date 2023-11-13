@@ -1,0 +1,6 @@
+file_path:  output_testset_ldfcc-lcnn-attention-am_1
+accent:  arf
+Score file: output_testset_ldfcc-lcnn-attention-am_1
+mintDCF: 0.8173
+EER: 61.605%
+Threshold: 0.204917

@@ -1,0 +1,6 @@
+file_path:  output_testset_ldfcc-lcnn-attention-p2s_1000
+accent:  clm
+Score file: output_testset_ldfcc-lcnn-attention-p2s_1000
+mintDCF: 0.7311
+EER: 23.968%
+Threshold: 0.099764
