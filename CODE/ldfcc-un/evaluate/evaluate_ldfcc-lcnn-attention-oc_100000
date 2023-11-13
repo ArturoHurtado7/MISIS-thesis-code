@@ -1,0 +1,5 @@
+file_path:  output_testset_ldfcc-lcnn-attention-oc_100000
+Score file: output_testset_ldfcc-lcnn-attention-oc_100000
+mintDCF: 0.1159
+EER: 4.174%
+Threshold: 0.987894
