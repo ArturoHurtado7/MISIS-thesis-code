@@ -1,0 +1,6 @@
+file_path:  output_testset_spec2-lcnn-fixed-sig_100000
+accent:  clf
+Score file: output_testset_spec2-lcnn-fixed-sig_100000
+mintDCF: 0.5831
+EER: 23.893%
+Threshold: 0.408094

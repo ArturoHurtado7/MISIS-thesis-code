@@ -1,0 +1,6 @@
+file_path:  output_testset_spec2-lcnn-attention-p2s_1000
+accent:  vem
+Score file: output_testset_spec2-lcnn-attention-p2s_1000
+mintDCF: 0.0575
+EER: 1.950%
+Threshold: 0.056363
