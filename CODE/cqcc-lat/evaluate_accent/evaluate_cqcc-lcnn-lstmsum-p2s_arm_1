@@ -1,0 +1,6 @@
+file_path:  output_testset_cqcc-lcnn-lstmsum-p2s_1
+accent:  arm
+Score file: output_testset_cqcc-lcnn-lstmsum-p2s_1
+mintDCF: 0.1291
+EER: 4.280%
+Threshold: 0.013459

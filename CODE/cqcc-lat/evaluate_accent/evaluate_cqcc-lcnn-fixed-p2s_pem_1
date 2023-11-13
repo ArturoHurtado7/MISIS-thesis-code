@@ -1,0 +1,6 @@
+file_path:  output_testset_cqcc-lcnn-fixed-p2s_1
+accent:  pem
+Score file: output_testset_cqcc-lcnn-fixed-p2s_1
+mintDCF: 0.0253
+EER: 1.335%
+Threshold: 0.150150

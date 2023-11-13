@@ -1,0 +1,6 @@
+file_path:  output_testset_cqcc-lcnn-fixed-oc_10
+accent:  vem
+Score file: output_testset_cqcc-lcnn-fixed-oc_10
+mintDCF: 0.5432
+EER: 17.530%
+Threshold: 0.033892
