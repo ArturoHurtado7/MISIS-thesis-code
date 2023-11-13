@@ -1,0 +1,6 @@
+file_path:  output_testset_mdfcc-lcnn-fixed-sig_1000
+accent:  vem
+Score file: output_testset_mdfcc-lcnn-fixed-sig_1000
+mintDCF: 0.3117
+EER: 16.880%
+Threshold: -10.357988

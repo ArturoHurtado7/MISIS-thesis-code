@@ -1,0 +1,5 @@
+file_path:  output_testset_mdfcc-lcnn-fixed-p2s_10000
+Score file: output_testset_mdfcc-lcnn-fixed-p2s_10000
+mintDCF: 0.0720
+EER: 2.545%
+Threshold: 0.991587

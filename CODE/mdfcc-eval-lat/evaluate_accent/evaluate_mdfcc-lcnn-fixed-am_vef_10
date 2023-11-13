@@ -1,0 +1,6 @@
+file_path:  output_testset_mdfcc-lcnn-fixed-am_10
+accent:  vef
+Score file: output_testset_mdfcc-lcnn-fixed-am_10
+mintDCF: 0.0736
+EER: 2.599%
+Threshold: 0.659524

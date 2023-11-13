@@ -1,0 +1,6 @@
+file_path:  output_testset_mdfcc-lcnn-attention-oc_10
+accent:  clf
+Score file: output_testset_mdfcc-lcnn-attention-oc_10
+mintDCF: 0.7945
+EER: 59.852%
+Threshold: -0.833093

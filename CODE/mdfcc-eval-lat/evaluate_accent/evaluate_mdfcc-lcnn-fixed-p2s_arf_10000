@@ -1,0 +1,6 @@
+file_path:  output_testset_mdfcc-lcnn-fixed-p2s_10000
+accent:  arf
+Score file: output_testset_mdfcc-lcnn-fixed-p2s_10000
+mintDCF: 0.9791
+EER: 55.783%
+Threshold: 0.014396
