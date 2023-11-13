@@ -1,0 +1,6 @@
+file_path:  output_testset_mdfcc-lcnn-lstmsum-am_1000
+accent:  vem
+Score file: output_testset_mdfcc-lcnn-lstmsum-am_1000
+mintDCF: 0.2181
+EER: 6.815%
+Threshold: 0.187912
