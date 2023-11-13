@@ -1,0 +1,6 @@
+file_path:  output_testset_cqcc-lcnn-lstmsum-am_1000
+accent:  vem
+Score file: output_testset_cqcc-lcnn-lstmsum-am_1000
+mintDCF: 0.0161
+EER: 0.650%
+Threshold: 0.219059

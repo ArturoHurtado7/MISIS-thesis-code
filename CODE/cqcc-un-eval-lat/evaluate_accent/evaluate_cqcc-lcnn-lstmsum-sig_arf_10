@@ -1,0 +1,6 @@
+file_path:  output_testset_cqcc-lcnn-lstmsum-sig_10
+accent:  arf
+Score file: output_testset_cqcc-lcnn-lstmsum-sig_10
+mintDCF: 0.0402
+EER: 1.758%
+Threshold: 0.479583

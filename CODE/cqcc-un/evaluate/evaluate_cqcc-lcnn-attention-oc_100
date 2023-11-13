@@ -1,0 +1,30 @@
+file_path:  output_testset_cqcc-lcnn-attention-oc_100
+score is not numeric: nan file name  LA_E_1112020
+score is not numeric: nan file name  LA_E_1529879
+score is not numeric: nan file name  LA_E_1731254
+score is not numeric: nan file name  LA_E_1766935
+score is not numeric: nan file name  LA_E_2504997
+score is not numeric: nan file name  LA_E_2576560
+score is not numeric: nan file name  LA_E_2862036
+score is not numeric: nan file name  LA_E_3259101
+score is not numeric: nan file name  LA_E_3632800
+score is not numeric: nan file name  LA_E_4154951
+score is not numeric: nan file name  LA_E_4425556
+score is not numeric: nan file name  LA_E_4455909
+score is not numeric: nan file name  LA_E_4541479
+score is not numeric: nan file name  LA_E_4677027
+score is not numeric: nan file name  LA_E_5054367
+score is not numeric: nan file name  LA_E_5850564
+score is not numeric: nan file name  LA_E_5896016
+score is not numeric: nan file name  LA_E_6002363
+score is not numeric: nan file name  LA_E_6065846
+score is not numeric: nan file name  LA_E_6639680
+score is not numeric: nan file name  LA_E_6809196
+score is not numeric: nan file name  LA_E_8563611
+score is not numeric: nan file name  LA_E_9015342
+score is not numeric: nan file name  LA_E_9023213
+score is not numeric: nan file name  LA_E_9169182
+Score file: output_testset_cqcc-lcnn-attention-oc_100
+mintDCF: 0.1254
+EER: 6.608%
+Threshold: 0.995485

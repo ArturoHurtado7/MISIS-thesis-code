@@ -1,0 +1,6 @@
+file_path:  output_testset_cqcc-lcnn-lstmsum-sig_10
+accent:  vef
+Score file: output_testset_cqcc-lcnn-lstmsum-sig_10
+mintDCF: 0.0000
+EER: 0.000%
+Threshold: -2.560140

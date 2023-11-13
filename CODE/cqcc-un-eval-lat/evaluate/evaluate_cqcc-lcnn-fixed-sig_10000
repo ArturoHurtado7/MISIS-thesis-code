@@ -1,0 +1,5 @@
+file_path:  output_testset_cqcc-lcnn-fixed-sig_10000
+Score file: output_testset_cqcc-lcnn-fixed-sig_10000
+mintDCF: 0.0321
+EER: 1.060%
+Threshold: -1.192253
