@@ -1,0 +1,6 @@
+file_path:  output_testset_ldfcc-lcnn-fixed-am_100000
+accent:  arm
+Score file: output_testset_ldfcc-lcnn-fixed-am_100000
+mintDCF: 0.2234
+EER: 7.832%
+Threshold: 0.241554

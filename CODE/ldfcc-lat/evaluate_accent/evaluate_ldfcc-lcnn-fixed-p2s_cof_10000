@@ -1,0 +1,6 @@
+file_path:  output_testset_ldfcc-lcnn-fixed-p2s_10000
+accent:  cof
+Score file: output_testset_ldfcc-lcnn-fixed-p2s_10000
+mintDCF: 0.2455
+EER: 8.677%
+Threshold: 0.005110

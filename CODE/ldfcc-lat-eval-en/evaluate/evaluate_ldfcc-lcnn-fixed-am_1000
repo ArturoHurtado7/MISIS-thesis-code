@@ -1,0 +1,5 @@
+file_path:  output_testset_ldfcc-lcnn-fixed-am_1000
+Score file: output_testset_ldfcc-lcnn-fixed-am_1000
+mintDCF: 0.8108
+EER: 29.708%
+Threshold: 0.222852
