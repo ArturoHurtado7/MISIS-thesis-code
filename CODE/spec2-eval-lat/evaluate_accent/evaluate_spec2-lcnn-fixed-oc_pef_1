@@ -1,0 +1,6 @@
+file_path:  output_testset_spec2-lcnn-fixed-oc_1
+accent:  pef
+Score file: output_testset_spec2-lcnn-fixed-oc_1
+mintDCF: 0.0938
+EER: 4.082%
+Threshold: -0.750494

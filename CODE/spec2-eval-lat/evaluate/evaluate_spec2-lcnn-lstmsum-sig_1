@@ -1,0 +1,5 @@
+file_path:  output_testset_spec2-lcnn-lstmsum-sig_1
+Score file: output_testset_spec2-lcnn-lstmsum-sig_1
+mintDCF: 0.6139
+EER: 38.012%
+Threshold: 7.658882

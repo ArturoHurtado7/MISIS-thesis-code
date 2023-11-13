@@ -1,0 +1,6 @@
+file_path:  output_testset_spec2-lcnn-fixed-oc_1000
+accent:  com
+Score file: output_testset_spec2-lcnn-fixed-oc_1000
+mintDCF: 0.0737
+EER: 2.762%
+Threshold: -0.677383
