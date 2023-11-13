@@ -1,0 +1,5 @@
+file_path:  output_testset_spec2-lcnn-attention-p2s_1000
+Score file: output_testset_spec2-lcnn-attention-p2s_1000
+mintDCF: 0.9822
+EER: 43.549%
+Threshold: 0.153060

@@ -1,0 +1,195 @@
+[94m-------------------------------------------------[0m
+[94m---  Start program 2023-11-05 17:54:57.073716 ---[0m
+[94m-------------------------------------------------[0m
+[94mLoad module: <module 'config' from '/home/jahurtado905/notebooks/Experiments/spec2-lat_10/config.py'>[0m
+[94mLoad module: <module 'spec2-lcnn-attention-sig' from '/home/jahurtado905/notebooks/Experiments/spec2-lat_10/spec2-lcnn-attention-sig.py'>[0m
+[94mRandom seed: 100[0m
+[94mGPU Device: 0[0m
+[94mDevice: cuda[0m
+[94mTraining[0m
+[94mParams: {'batch_size': 64, 'shuffle': True, 'num_workers': 3, 'sampler': 'block_shuffle_by_length'} 
+[0m
+[94m--------------------------------------------------------------------[0m
+[94m---  Loading dataset asvspoof2019_trn 2023-11-05 17:54:57.365079 ---[0m
+[94m--------------------------------------------------------------------[0m
+[94mSkip scanning directories[0m
+[94mRead sequence info: ./asvspoof2019_trn_utt_length.dic[0m
+[94m--------------------------------------------------------------------[0m
+[94m---  Loading dataset asvspoof2019_val 2023-11-05 17:54:57.540529 ---[0m
+[94m--------------------------------------------------------------------[0m
+[94mSkip scanning directories[0m
+[94mRead sequence info: ./asvspoof2019_val_utt_length.dic[0m
+[94mNo training checkpoint[0m
+[94m--------------------------------------------------------[0m
+[94m---  Start model training 2023-11-05 17:54:57.679897 ---[0m
+[94m--------------------------------------------------------[0m
+Optimizer:
+  Type: Adam 
+  Learing rate: 0.000300
+  Epochs: 100
+  No-best-epochs: 50
+  LR scheduler, StepLR [gamma 0.500000, step 10]
+Dataset asvspoof2019_trn:
+  Time steps: 3106224665 
+  Data sequence num: 34684
+  Maximum sequence length: 236203
+  Minimum sequence length: 23510
+  Inputs
+    Dirs:
+        /home/jahurtado905/notebooks/anti-spoofing/anti-spoof-eval/03-asvspoof-mega/DATA_LAT/asvspoof2019_LA/train_dev
+    Exts:['.wav']
+    Dims:[1]
+    Reso:[1]
+    Norm:[False]
+  Outputs
+    Dirs:
+    Exts:['.bin']
+    Dims:[1]
+    Reso:[1]
+    Norm:[False]
+{'batch_size': 64, 'shuffle': True, 'num_workers': 3, 'sampler': 'block_shuffle_by_length'}
+Dataset asvspoof2019_val:
+  Time steps: 283227990 
+  Data sequence num: 3658
+  Maximum sequence length: 226645
+  Minimum sequence length: 24706
+  Inputs
+    Dirs:
+        /home/jahurtado905/notebooks/anti-spoofing/anti-spoof-eval/03-asvspoof-mega/DATA_LAT/asvspoof2019_LA/train_dev
+    Exts:['.wav']
+    Dims:[1]
+    Reso:[1]
+    Norm:[False]
+  Outputs
+    Dirs:
+    Exts:['.bin']
+    Dims:[1]
+    Reso:[1]
+    Norm:[False]
+{'batch_size': 64, 'shuffle': True, 'num_workers': 3, 'sampler': 'block_shuffle_by_length'}
+[94m
+Use single GPU: NVIDIA A40
+[0m
+[94mModel check:[0m
+[OK]: prepare_mean_std found
+[OK]: normalize_input found
+[OK]: normalize_target found
+[OK]: denormalize_output found
+[OK]: forward found
+[OK]: inference is ignored, alternative method for inference
+[OK]: loss is ignored, loss defined within model module
+[OK]: other_setups is ignored, other setup functions before training
+[OK]: flag_validation is ignored, flag to indicate train or validation set
+[OK]: validation is ignored, deprecated. Please use model.flag_validation
+[OK]: finish_up_inference is ignored, method to finish up work after inference
+[94mModel infor:[0m
+Model(
+  (m_frontend): ModuleList(
+    (0): Spectrogram()
+  )
+  (m_transform): ModuleList(
+    (0): Sequential(
+      (0): TrainableLinearFb()
+      (1): Conv2d(1, 64, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+      (2): MaxFeatureMap2D()
+      (3): MaxPool2d(kernel_size=[2, 2], stride=[2, 2], padding=0, dilation=1, ceil_mode=False)
+      (4): Conv2d(32, 64, kernel_size=(1, 1), stride=(1, 1))
+      (5): MaxFeatureMap2D()
+      (6): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (7): Conv2d(32, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (8): MaxFeatureMap2D()
+      (9): MaxPool2d(kernel_size=[2, 2], stride=[2, 2], padding=0, dilation=1, ceil_mode=False)
+      (10): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (11): Conv2d(48, 96, kernel_size=(1, 1), stride=(1, 1))
+      (12): MaxFeatureMap2D()
+      (13): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (14): Conv2d(48, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (15): MaxFeatureMap2D()
+      (16): MaxPool2d(kernel_size=[2, 2], stride=[2, 2], padding=0, dilation=1, ceil_mode=False)
+      (17): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1))
+      (18): MaxFeatureMap2D()
+      (19): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (20): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (21): MaxFeatureMap2D()
+      (22): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (23): Conv2d(32, 64, kernel_size=(1, 1), stride=(1, 1))
+      (24): MaxFeatureMap2D()
+      (25): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (26): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (27): MaxFeatureMap2D()
+      (28): MaxPool2d(kernel_size=[2, 2], stride=[2, 2], padding=0, dilation=1, ceil_mode=False)
+      (29): Dropout(p=0.7, inplace=False)
+    )
+  )
+  (m_output_act): ModuleList(
+    (0): Linear(in_features=192, out_features=1, bias=True)
+  )
+  (m_pooling): ModuleList(
+    (0): SelfWeightedPooling()
+  )
+)
+Parameter number: 173213
+
+--------------------------------------------------------------
+  Epoch |  Duration(s) |   Train loss |     Dev loss |  Best
+--------------------------------------------------------------
+      0 |         33.3 |       0.3399 |       0.9777 |   yes
+      1 |         31.5 |       0.2554 |       0.9750 |   yes
+      2 |         31.8 |       0.2057 |       1.2973 |    no
+      3 |         31.5 |       0.1720 |       0.6299 |   yes
+      4 |         31.3 |       0.1416 |       1.3274 |    no
+      5 |         31.6 |       0.1252 |       0.6444 |    no
+      6 |         31.9 |       0.0999 |       0.9654 |    no
+      7 |         31.5 |       0.0976 |       0.6357 |    no
+      8 |         30.6 |       0.0848 |       1.3191 |    no
+      9 |         31.3 |       0.0702 |       1.3103 |    no  LR -> 1.50e-04 
+     10 |         31.0 |       0.0460 |       1.0104 |    no  LR -> 1.50e-04 
+     11 |         31.6 |       0.0340 |       1.5125 |    no  LR -> 1.50e-04 
+     12 |         31.6 |       0.0317 |       1.1727 |    no  LR -> 1.50e-04 
+     13 |         31.7 |       0.0232 |       1.5500 |    no  LR -> 1.50e-04 
+     14 |         31.9 |       0.0180 |       1.6468 |    no  LR -> 1.50e-04 
+     15 |         31.6 |       0.0165 |       0.9301 |    no  LR -> 1.50e-04 
+     16 |         30.7 |       0.0170 |       1.4545 |    no  LR -> 1.50e-04 
+     17 |         31.5 |       0.0122 |       1.4406 |    no  LR -> 1.50e-04 
+     18 |         30.9 |       0.0101 |       1.6595 |    no  LR -> 1.50e-04 
+     19 |         31.5 |       0.0113 |       1.8693 |    no  LR -> 7.50e-05 
+     20 |         32.0 |       0.0057 |       2.0670 |    no  LR -> 7.50e-05 
+     21 |         31.7 |       0.0034 |       1.9014 |    no  LR -> 7.50e-05 
+     22 |         31.4 |       0.0034 |       2.1696 |    no  LR -> 7.50e-05 
+     23 |         32.2 |       0.0016 |       2.0915 |    no  LR -> 7.50e-05 
+     24 |         31.5 |       0.0019 |       2.2357 |    no  LR -> 7.50e-05 
+     25 |         31.8 |       0.0022 |       2.1058 |    no  LR -> 7.50e-05 
+     26 |         31.3 |       0.0026 |       2.0264 |    no  LR -> 7.50e-05 
+     27 |         31.4 |       0.0015 |       1.8511 |    no  LR -> 7.50e-05 
+     28 |         32.0 |       0.0045 |       1.9911 |    no  LR -> 7.50e-05 
+     29 |         32.0 |       0.0033 |       2.4069 |    no  LR -> 3.75e-05 
+     30 |         31.6 |       0.0014 |       2.1673 |    no  LR -> 3.75e-05 
+     31 |         31.2 |       0.0010 |       2.3133 |    no  LR -> 3.75e-05 
+     32 |         31.6 |       0.0006 |       2.3647 |    no  LR -> 3.75e-05 
+     33 |         32.0 |       0.0008 |       2.6744 |    no  LR -> 3.75e-05 
+     34 |         31.8 |       0.0008 |       2.4209 |    no  LR -> 3.75e-05 
+     35 |         31.3 |       0.0005 |       2.3743 |    no  LR -> 3.75e-05 
+     36 |         31.7 |       0.0006 |       2.1927 |    no  LR -> 3.75e-05 
+     37 |         31.7 |       0.0007 |       2.5225 |    no  LR -> 3.75e-05 
+     38 |         32.1 |       0.0008 |       2.4526 |    no  LR -> 3.75e-05 
+     39 |         31.5 |       0.0005 |       2.8435 |    no  LR -> 1.87e-05 
+     40 |         31.2 |       0.0004 |       2.4240 |    no  LR -> 1.87e-05 
+     41 |         31.3 |       0.0002 |       2.5706 |    no  LR -> 1.87e-05 
+     42 |         31.8 |       0.0001 |       2.1283 |    no  LR -> 1.87e-05 
+     43 |         31.2 |       0.0002 |       2.4308 |    no  LR -> 1.87e-05 
+     44 |         32.1 |       0.0004 |       2.7572 |    no  LR -> 1.87e-05 
+     45 |         31.7 |       0.0003 |       2.5237 |    no  LR -> 1.87e-05 
+     46 |         30.9 |       0.0002 |       2.3361 |    no  LR -> 1.87e-05 
+     47 |         31.7 |       0.0002 |       2.4253 |    no  LR -> 1.87e-05 
+     48 |         31.1 |       0.0003 |       3.0760 |    no  LR -> 1.87e-05 
+     49 |         31.5 |       0.0002 |       2.2718 |    no  LR -> 9.37e-06 
+     50 |         30.8 |       0.0001 |       2.5886 |    no  LR -> 9.37e-06 
+     51 |         31.8 |       0.0001 |       2.5442 |    no  LR -> 9.37e-06 
+     52 |         32.0 |       0.0002 |       2.7238 |    no  LR -> 9.37e-06 
+     53 |         31.3 |       0.0001 |       2.5270 |    no  LR -> 9.37e-06 
+--------------------------------------------------------------
+[94mTraining finished by early stopping[0m
+[94mModel is saved to [0m[94m./trained_network.pt[0m
+[94m--------------------------------------------------[0m
+[94m---  Finish program 2023-11-05 18:24:33.122009 ---[0m
+[94m--------------------------------------------------[0m

@@ -1,0 +1,241 @@
+[94m-------------------------------------------------[0m
+[94m---  Start program 2023-11-05 09:25:28.630132 ---[0m
+[94m-------------------------------------------------[0m
+[94mLoad module: <module 'config' from '/home/jahurtado905/notebooks/Experiments/spec2-lat_10/config.py'>[0m
+[94mLoad module: <module 'spec2-lcnn-fixed-am' from '/home/jahurtado905/notebooks/Experiments/spec2-lat_10/spec2-lcnn-fixed-am.py'>[0m
+[94mRandom seed: 10[0m
+[94mGPU Device: 0[0m
+[94mDevice: cuda[0m
+[94mTraining[0m
+[94mParams: {'batch_size': 64, 'shuffle': True, 'num_workers': 3, 'sampler': 'block_shuffle_by_length'} 
+[0m
+[94m--------------------------------------------------------------------[0m
+[94m---  Loading dataset asvspoof2019_trn 2023-11-05 09:25:28.935800 ---[0m
+[94m--------------------------------------------------------------------[0m
+[94mSkip scanning directories[0m
+[94mRead sequence info: ./asvspoof2019_trn_utt_length.dic[0m
+[94m--------------------------------------------------------------------[0m
+[94m---  Loading dataset asvspoof2019_val 2023-11-05 09:25:29.124573 ---[0m
+[94m--------------------------------------------------------------------[0m
+[94mSkip scanning directories[0m
+[94mRead sequence info: ./asvspoof2019_val_utt_length.dic[0m
+[94mNo training checkpoint[0m
+[94m--------------------------------------------------------[0m
+[94m---  Start model training 2023-11-05 09:25:29.297243 ---[0m
+[94m--------------------------------------------------------[0m
+Optimizer:
+  Type: Adam 
+  Learing rate: 0.000300
+  Epochs: 100
+  No-best-epochs: 50
+  LR scheduler, StepLR [gamma 0.500000, step 10]
+Dataset asvspoof2019_trn:
+  Time steps: 3106224665 
+  Data sequence num: 34684
+  Maximum sequence length: 236203
+  Minimum sequence length: 23510
+  Inputs
+    Dirs:
+        /home/jahurtado905/notebooks/anti-spoofing/anti-spoof-eval/03-asvspoof-mega/DATA_LAT/asvspoof2019_LA/train_dev
+    Exts:['.wav']
+    Dims:[1]
+    Reso:[1]
+    Norm:[False]
+  Outputs
+    Dirs:
+    Exts:['.bin']
+    Dims:[1]
+    Reso:[1]
+    Norm:[False]
+{'batch_size': 64, 'shuffle': True, 'num_workers': 3, 'sampler': 'block_shuffle_by_length'}
+Dataset asvspoof2019_val:
+  Time steps: 283227990 
+  Data sequence num: 3658
+  Maximum sequence length: 226645
+  Minimum sequence length: 24706
+  Inputs
+    Dirs:
+        /home/jahurtado905/notebooks/anti-spoofing/anti-spoof-eval/03-asvspoof-mega/DATA_LAT/asvspoof2019_LA/train_dev
+    Exts:['.wav']
+    Dims:[1]
+    Reso:[1]
+    Norm:[False]
+  Outputs
+    Dirs:
+    Exts:['.bin']
+    Dims:[1]
+    Reso:[1]
+    Norm:[False]
+{'batch_size': 64, 'shuffle': True, 'num_workers': 3, 'sampler': 'block_shuffle_by_length'}
+[94m
+Use single GPU: NVIDIA A40
+[0m
+[94mModel check:[0m
+[OK]: prepare_mean_std found
+[OK]: normalize_input found
+[OK]: normalize_target found
+[OK]: denormalize_output found
+[OK]: forward found
+[OK]: inference is ignored, alternative method for inference
+[OK]: loss is ignored, loss defined within model module
+[OK]: other_setups is ignored, other setup functions before training
+[OK]: flag_validation is ignored, flag to indicate train or validation set
+[OK]: validation is ignored, deprecated. Please use model.flag_validation
+[OK]: finish_up_inference is ignored, method to finish up work after inference
+[94mModel infor:[0m
+Model(
+  (m_transform): ModuleList(
+    (0): Sequential(
+      (0): TrainableLinearFb()
+      (1): Conv2d(1, 64, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+      (2): MaxFeatureMap2D()
+      (3): MaxPool2d(kernel_size=[2, 2], stride=[2, 2], padding=0, dilation=1, ceil_mode=False)
+      (4): Conv2d(32, 64, kernel_size=(1, 1), stride=(1, 1))
+      (5): MaxFeatureMap2D()
+      (6): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (7): Conv2d(32, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (8): MaxFeatureMap2D()
+      (9): MaxPool2d(kernel_size=[2, 2], stride=[2, 2], padding=0, dilation=1, ceil_mode=False)
+      (10): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (11): Conv2d(48, 96, kernel_size=(1, 1), stride=(1, 1))
+      (12): MaxFeatureMap2D()
+      (13): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (14): Conv2d(48, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (15): MaxFeatureMap2D()
+      (16): MaxPool2d(kernel_size=[2, 2], stride=[2, 2], padding=0, dilation=1, ceil_mode=False)
+      (17): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1))
+      (18): MaxFeatureMap2D()
+      (19): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (20): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (21): MaxFeatureMap2D()
+      (22): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (23): Conv2d(32, 64, kernel_size=(1, 1), stride=(1, 1))
+      (24): MaxFeatureMap2D()
+      (25): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (26): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (27): MaxFeatureMap2D()
+      (28): MaxPool2d(kernel_size=[2, 2], stride=[2, 2], padding=0, dilation=1, ceil_mode=False)
+    )
+  )
+  (m_output_act): ModuleList(
+    (0): Sequential(
+      (0): Dropout(p=0.7, inplace=False)
+      (1): Linear(in_features=4416, out_features=512, bias=True)
+      (2): MaxFeatureMap2D()
+      (3): Linear(in_features=256, out_features=64, bias=True)
+    )
+  )
+  (m_frontend): ModuleList(
+    (0): Spectrogram()
+  )
+  (m_angle): ModuleList(
+    (0): AMAngleLayer()
+  )
+)
+Parameter number: 2451004
+
+--------------------------------------------------------------
+  Epoch |  Duration(s) |   Train loss |     Dev loss |  Best
+--------------------------------------------------------------
+      0 |         43.8 |       4.7199 |      22.6880 |   yes
+      1 |         42.1 |       4.6599 |      23.4124 |    no
+      2 |         42.0 |       4.6333 |      23.7799 |    no
+      3 |         41.7 |       4.6528 |      22.6331 |   yes
+      4 |         41.2 |       4.6141 |      23.0187 |    no
+      5 |         42.8 |       4.6013 |      22.7658 |    no
+      6 |         41.9 |       4.6010 |      22.7739 |    no
+      7 |         41.8 |       4.6009 |      23.6514 |    no
+      8 |         41.9 |       4.5504 |      22.7677 |    no
+      9 |         42.5 |       4.4545 |      22.0631 |   yes  LR -> 1.50e-04 
+     10 |         41.9 |       4.2152 |      20.1394 |   yes  LR -> 1.50e-04 
+     11 |         42.3 |       3.8585 |      20.1608 |    no  LR -> 1.50e-04 
+     12 |         41.1 |       3.6103 |      19.5666 |   yes  LR -> 1.50e-04 
+     13 |         42.1 |       3.5344 |      19.3293 |   yes  LR -> 1.50e-04 
+     14 |         42.8 |       3.3640 |      20.0092 |    no  LR -> 1.50e-04 
+     15 |         42.0 |       3.2449 |      18.2977 |   yes  LR -> 1.50e-04 
+     16 |         42.4 |       3.1108 |      19.2270 |    no  LR -> 1.50e-04 
+     17 |         42.5 |       2.9699 |      19.4053 |    no  LR -> 1.50e-04 
+     18 |         42.7 |       2.8708 |      15.9389 |   yes  LR -> 1.50e-04 
+     19 |         42.3 |       2.7207 |      19.3893 |    no  LR -> 7.50e-05 
+     20 |         42.0 |       2.4723 |      15.9962 |    no  LR -> 7.50e-05 
+     21 |         42.1 |       2.3612 |      17.8537 |    no  LR -> 7.50e-05 
+     22 |         42.2 |       2.2206 |      16.4279 |    no  LR -> 7.50e-05 
+     23 |         42.4 |       2.2184 |      15.7608 |   yes  LR -> 7.50e-05 
+     24 |         42.1 |       2.1614 |      15.6506 |   yes  LR -> 7.50e-05 
+     25 |         42.7 |       2.0982 |      15.5555 |   yes  LR -> 7.50e-05 
+     26 |         42.3 |       2.0220 |      16.6817 |    no  LR -> 7.50e-05 
+     27 |         41.6 |       2.0090 |      16.5731 |    no  LR -> 7.50e-05 
+     28 |         42.0 |       1.9389 |      15.1514 |   yes  LR -> 7.50e-05 
+     29 |         42.6 |       1.8542 |      15.5187 |    no  LR -> 3.75e-05 
+     30 |         41.7 |       1.7052 |      15.4859 |    no  LR -> 3.75e-05 
+     31 |         41.7 |       1.6521 |      15.6851 |    no  LR -> 3.75e-05 
+     32 |         42.8 |       1.6737 |      15.7513 |    no  LR -> 3.75e-05 
+     33 |         42.5 |       1.6571 |      16.0371 |    no  LR -> 3.75e-05 
+     34 |         42.2 |       1.5886 |      15.5692 |    no  LR -> 3.75e-05 
+     35 |         41.5 |       1.5585 |      16.5465 |    no  LR -> 3.75e-05 
+     36 |         41.6 |       1.5256 |      15.3310 |    no  LR -> 3.75e-05 
+     37 |         42.4 |       1.4681 |      16.3733 |    no  LR -> 3.75e-05 
+     38 |         41.8 |       1.4142 |      14.4322 |   yes  LR -> 3.75e-05 
+     39 |         41.7 |       1.4419 |      15.5203 |    no  LR -> 1.87e-05 
+     40 |         41.0 |       1.3556 |      15.5920 |    no  LR -> 1.87e-05 
+     41 |         41.7 |       1.3346 |      15.7647 |    no  LR -> 1.87e-05 
+     42 |         42.8 |       1.2977 |      14.5922 |    no  LR -> 1.87e-05 
+     43 |         42.3 |       1.2868 |      15.6102 |    no  LR -> 1.87e-05 
+     44 |         42.3 |       1.2458 |      16.0649 |    no  LR -> 1.87e-05 
+     45 |         42.6 |       1.2215 |      14.2991 |   yes  LR -> 1.87e-05 
+     46 |         42.4 |       1.2276 |      15.1677 |    no  LR -> 1.87e-05 
+     47 |         41.6 |       1.2173 |      15.8368 |    no  LR -> 1.87e-05 
+     48 |         42.7 |       1.1888 |      15.3734 |    no  LR -> 1.87e-05 
+     49 |         42.1 |       1.1693 |      15.2283 |    no  LR -> 9.37e-06 
+     50 |         41.3 |       1.1253 |      14.9574 |    no  LR -> 9.37e-06 
+     51 |         42.8 |       1.0805 |      14.9372 |    no  LR -> 9.37e-06 
+     52 |         42.5 |       1.0963 |      14.9311 |    no  LR -> 9.37e-06 
+     53 |         40.8 |       1.1140 |      14.8130 |    no  LR -> 9.37e-06 
+     54 |         41.8 |       1.0656 |      14.6401 |    no  LR -> 9.37e-06 
+     55 |         41.4 |       1.0628 |      15.0281 |    no  LR -> 9.37e-06 
+     56 |         41.7 |       1.0553 |      15.3702 |    no  LR -> 9.37e-06 
+     57 |         41.6 |       1.0344 |      14.9503 |    no  LR -> 9.37e-06 
+     58 |         41.0 |       0.9731 |      15.1493 |    no  LR -> 9.37e-06 
+     59 |         42.5 |       0.9855 |      15.2836 |    no  LR -> 4.69e-06 
+     60 |         42.6 |       0.9787 |      15.0162 |    no  LR -> 4.69e-06 
+     61 |         42.8 |       1.0031 |      14.8579 |    no  LR -> 4.69e-06 
+     62 |         41.3 |       0.9537 |      14.9946 |    no  LR -> 4.69e-06 
+     63 |         42.3 |       0.9693 |      15.0151 |    no  LR -> 4.69e-06 
+     64 |         42.3 |       0.9500 |      14.7838 |    no  LR -> 4.69e-06 
+     65 |         41.9 |       0.9728 |      15.0354 |    no  LR -> 4.69e-06 
+     66 |         41.4 |       0.9195 |      14.7604 |    no  LR -> 4.69e-06 
+     67 |         41.4 |       0.9376 |      15.0001 |    no  LR -> 4.69e-06 
+     68 |         41.8 |       0.9544 |      15.1209 |    no  LR -> 4.69e-06 
+     69 |         42.5 |       0.9250 |      15.0293 |    no  LR -> 2.34e-06 
+     70 |         41.6 |       0.9194 |      15.0963 |    no  LR -> 2.34e-06 
+     71 |         41.8 |       0.9162 |      15.1838 |    no  LR -> 2.34e-06 
+     72 |         42.2 |       0.8802 |      14.9660 |    no  LR -> 2.34e-06 
+     73 |         41.9 |       0.8789 |      15.1298 |    no  LR -> 2.34e-06 
+     74 |         41.9 |       0.9109 |      14.8535 |    no  LR -> 2.34e-06 
+     75 |         41.1 |       0.9064 |      15.1018 |    no  LR -> 2.34e-06 
+     76 |         41.8 |       0.8984 |      14.8545 |    no  LR -> 2.34e-06 
+     77 |         42.3 |       0.8664 |      14.8981 |    no  LR -> 2.34e-06 
+     78 |         41.9 |       0.8736 |      14.9982 |    no  LR -> 2.34e-06 
+     79 |         41.9 |       0.9032 |      14.9664 |    no  LR -> 1.17e-06 
+     80 |         42.7 |       0.8712 |      15.0041 |    no  LR -> 1.17e-06 
+     81 |         42.2 |       0.8741 |      14.8089 |    no  LR -> 1.17e-06 
+     82 |         42.0 |       0.8538 |      14.8563 |    no  LR -> 1.17e-06 
+     83 |         41.3 |       0.8754 |      14.9669 |    no  LR -> 1.17e-06 
+     84 |         41.6 |       0.8522 |      14.8042 |    no  LR -> 1.17e-06 
+     85 |         42.5 |       0.8464 |      14.9526 |    no  LR -> 1.17e-06 
+     86 |         43.1 |       0.8283 |      15.1446 |    no  LR -> 1.17e-06 
+     87 |         43.1 |       0.8570 |      15.1167 |    no  LR -> 1.17e-06 
+     88 |         42.1 |       0.8275 |      15.2972 |    no  LR -> 1.17e-06 
+     89 |         42.6 |       0.8348 |      14.9794 |    no  LR -> 5.86e-07 
+     90 |         42.7 |       0.7979 |      14.8970 |    no  LR -> 5.86e-07 
+     91 |         42.4 |       0.8497 |      14.9931 |    no  LR -> 5.86e-07 
+     92 |         42.0 |       0.8396 |      15.0477 |    no  LR -> 5.86e-07 
+     93 |         42.5 |       0.8124 |      14.7550 |    no  LR -> 5.86e-07 
+     94 |         42.4 |       0.8272 |      14.7799 |    no  LR -> 5.86e-07 
+     95 |         41.5 |       0.8306 |      15.1206 |    no  LR -> 5.86e-07 
+--------------------------------------------------------------
+[94mTraining finished by early stopping[0m
+[94mModel is saved to [0m[94m./trained_network.pt[0m
+[94m--------------------------------------------------[0m
+[94m---  Finish program 2023-11-05 10:34:59.588433 ---[0m
+[94m--------------------------------------------------[0m

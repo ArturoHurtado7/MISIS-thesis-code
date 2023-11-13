@@ -1,0 +1,6 @@
+file_path:  output_testset_spec2-lcnn-attention-oc_100
+accent:  clf
+Score file: output_testset_spec2-lcnn-attention-oc_100
+mintDCF: 0.1820
+EER: 8.965%
+Threshold: 0.577137

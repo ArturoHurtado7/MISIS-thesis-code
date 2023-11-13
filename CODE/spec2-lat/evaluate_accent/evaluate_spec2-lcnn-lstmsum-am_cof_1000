@@ -1,0 +1,6 @@
+file_path:  output_testset_spec2-lcnn-lstmsum-am_1000
+accent:  cof
+Score file: output_testset_spec2-lcnn-lstmsum-am_1000
+mintDCF: 0.0761
+EER: 2.956%
+Threshold: 0.223349

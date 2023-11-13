@@ -1,0 +1,6 @@
+file_path:  output_testset_spec2-lcnn-attention-sig_10
+accent:  vem
+Score file: output_testset_spec2-lcnn-attention-sig_10
+mintDCF: 0.4338
+EER: 24.030%
+Threshold: -6.242885
