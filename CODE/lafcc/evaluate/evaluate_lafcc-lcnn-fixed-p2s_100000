@@ -1,0 +1,5 @@
+file_path:  output_testset_lafcc-lcnn-fixed-p2s_100000
+Score file: output_testset_lafcc-lcnn-fixed-p2s_100000
+mintDCF: 0.0723
+EER: 3.290%
+Threshold: 0.995814
