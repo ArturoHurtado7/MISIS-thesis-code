@@ -1,0 +1,547 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "./english.json"},
+  "concat": [
+    {
+      "transform": [
+        {"filter": {"field": "backend", "equal": "LCNN-attention"}},
+        {"filter": {"field": "frontend", "equal": "CQCC"}}
+      ],
+      "height": {"step": 25},
+      "encoding": {
+        "y": {
+          "field": "activation", 
+          "type": "ordinal",
+          "title": "CQCC"
+        },
+        "x": {
+          "field": "index", 
+          "type": "ordinal", 
+          "title": "LCNN-attention",
+          "axis": {"orient": "top"}
+        }
+      },
+      "layer": [
+        {
+          "mark": "rect",
+          "encoding": {
+            "fill": {
+              "field": "EER",
+              "type": "quantitative",
+              "scale": {"scheme": "lightorange", "domain":[0,20]}
+            }
+          }
+        },
+        {
+          "mark": "text",
+          "encoding": {
+            "text": {
+              "field": "EER", 
+              "aggregate": "mean", 
+              "type": "quantitative",
+              "format": ".2f"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "transform": [
+        {"filter": {"field": "backend", "equal": "LCNN-trim-pad"}},
+        {"filter": {"field": "frontend", "equal": "CQCC"}}
+      ],
+      "height": {"step": 25},
+      "encoding": {
+        "y": {
+          "field": "activation", 
+          "type": "ordinal", 
+          "title": null,
+          "axis": {"labels": false, "ticks": false}
+        },
+        "x": {
+          "field": "index", 
+          "type": "ordinal", 
+          "title": "LCNN-trim-pad",
+          "axis": {"orient": "top"}
+        }
+      },
+      "layer": [
+        {
+          "mark": "rect",
+          "encoding": {
+            "fill": {
+              "field": "EER",
+              "type": "quantitative",
+              "scale": {"scheme": "lightorange"}
+            }
+          }
+        },
+        {
+          "mark": "text",
+          "encoding": {
+            "text": {
+              "field": "EER", 
+              "aggregate": "mean", 
+              "type": "quantitative",
+              "format": ".2f"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "transform": [
+        {"filter": {"field": "backend", "equal": "LCNN-LSTM-sum"}},
+        {"filter": {"field": "frontend", "equal": "CQCC"}}
+      ],
+      "height": {"step": 25},
+      "encoding": {
+        "y": {
+          "field": "activation", 
+          "type": "ordinal", 
+          "title": null,
+          "axis": {"labels": false, "ticks": false}
+        },
+        "x": {
+          "field": "index", 
+          "type": "ordinal", 
+          "title": "LCNN-LSTM-sum",
+          "axis": {"orient": "top"}
+        }
+      },
+      "layer": [
+        {
+          "mark": "rect",
+          "encoding": {
+            "fill": {
+              "field": "EER",
+              "type": "quantitative",
+              "scale": {"scheme": "lightorange"}
+            }
+          }
+        },
+        {
+          "mark": "text",
+          "encoding": {
+            "text": {
+              "field": "EER", 
+              "aggregate": "mean", 
+              "type": "quantitative",
+              "format": ".2f"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "transform": [
+        {"filter": {"field": "backend", "equal": "LCNN-attention"}},
+        {"filter": {"field": "frontend", "equal": "SPEC2"}}
+      ],
+      "height": {"step": 25},
+      "encoding": {
+        "y": {
+          "field": "activation", 
+          "type": "ordinal",
+          "title": "Spectogram"
+        },
+        "x": {
+          "field": "index", 
+          "type": "ordinal", 
+          "title": null,
+          "axis": {"labels": false, "ticks": false}
+        }
+      },
+      "layer": [
+        {
+          "mark": "rect",
+          "encoding": {
+            "fill": {
+              "field": "EER",
+              "type": "quantitative",
+              "scale": {"scheme": "lightorange"}
+            }
+          }
+        },
+        {
+          "mark": "text",
+          "encoding": {
+            "text": {
+              "field": "EER", 
+              "aggregate": "mean", 
+              "type": "quantitative",
+              "format": ".2f"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "transform": [
+        {"filter": {"field": "backend", "equal": "LCNN-trim-pad"}},
+        {"filter": {"field": "frontend", "equal": "SPEC2"}}
+      ],
+      "height": {"step": 25},
+      "encoding": {
+        "y": {
+          "field": "activation", 
+          "type": "ordinal", 
+          "title": null,
+          "axis": {"labels": false, "ticks": false}
+        },
+        "x": {
+          "field": "index", 
+          "type": "ordinal", 
+          "title": null,
+          "axis": {"labels": false, "ticks": false}
+        }
+      },
+      "layer": [
+        {
+          "mark": "rect",
+          "encoding": {
+            "fill": {
+              "field": "EER",
+              "type": "quantitative",
+              "scale": {"scheme": "lightorange"}
+            }
+          }
+        },
+        {
+          "mark": "text",
+          "encoding": {
+            "text": {
+              "field": "EER", 
+              "aggregate": "mean", 
+              "type": "quantitative",
+              "format": ".2f"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "transform": [
+        {"filter": {"field": "backend", "equal": "LCNN-LSTM-sum"}},
+        {"filter": {"field": "frontend", "equal": "SPEC2"}}
+      ],
+      "height": {"step": 25},
+      "encoding": {
+        "y": {
+          "field": "activation", 
+          "type": "ordinal", 
+          "title": null,
+          "axis": {"labels": false, "ticks": false}
+        },
+        "x": {
+          "field": "index", 
+          "type": "ordinal", 
+          "title": null,
+          "axis": {"labels": false, "ticks": false}
+        }
+      },
+      "layer": [
+        {
+          "mark": "rect",
+          "encoding": {
+            "fill": {
+              "field": "EER",
+              "type": "quantitative",
+              "scale": {"scheme": "lightorange"}
+            }
+          }
+        },
+        {
+          "mark": "text",
+          "encoding": {
+            "text": {
+              "field": "EER", 
+              "aggregate": "mean", 
+              "type": "quantitative",
+              "format": ".2f"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "transform": [
+        {"filter": {"field": "backend", "equal": "LCNN-attention"}},
+        {"filter": {"field": "frontend", "equal": "MDFCC"}}
+      ],
+      "height": {"step": 25},
+      "encoding": {
+        "y": {
+          "field": "activation", 
+          "type": "ordinal",
+          "title": "MFCC"
+        },
+        "x": {
+          "field": "index", 
+          "type": "ordinal", 
+          "title": null,
+          "axis": {"labels": false, "ticks": false}
+        }
+      },
+      "layer": [
+        {
+          "mark": "rect",
+          "encoding": {
+            "fill": {
+              "field": "EER",
+              "type": "quantitative",
+              "scale": {"scheme": "lightorange"}
+            }
+          }
+        },
+        {
+          "mark": "text",
+          "encoding": {
+            "text": {
+              "field": "EER", 
+              "aggregate": "mean", 
+              "type": "quantitative",
+              "format": ".2f"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "transform": [
+        {"filter": {"field": "backend", "equal": "LCNN-trim-pad"}},
+        {"filter": {"field": "frontend", "equal": "MDFCC"}}
+      ],
+      "height": {"step": 25},
+      "encoding": {
+        "y": {
+          "field": "activation", 
+          "type": "ordinal", 
+          "title": null,
+          "axis": {"labels": false, "ticks": false}
+        },
+        "x": {
+          "field": "index", 
+          "type": "ordinal", 
+          "title": null,
+          "axis": {"labels": false, "ticks": false}
+        }
+      },
+      "layer": [
+        {
+          "mark": "rect",
+          "encoding": {
+            "fill": {
+              "field": "EER",
+              "type": "quantitative",
+              "scale": {"scheme": "lightorange"}
+            }
+          }
+        },
+        {
+          "mark": "text",
+          "encoding": {
+            "text": {
+              "field": "EER", 
+              "aggregate": "mean", 
+              "type": "quantitative",
+              "format": ".2f"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "transform": [
+        {"filter": {"field": "backend", "equal": "LCNN-LSTM-sum"}},
+        {"filter": {"field": "frontend", "equal": "MDFCC"}}
+      ],
+      "height": {"step": 25},
+      "encoding": {
+        "y": {
+          "field": "activation", 
+          "type": "ordinal", 
+          "title": null,
+          "axis": {"labels": false, "ticks": false}
+        },
+        "x": {
+          "field": "index", 
+          "type": "ordinal", 
+          "title": null,
+          "axis": {"labels": false, "ticks": false}
+        }
+      },
+      "layer": [
+        {
+          "mark": "rect",
+          "encoding": {
+            "fill": {
+              "field": "EER",
+              "type": "quantitative",
+              "scale": {"scheme": "lightorange"}
+            }
+          }
+        },
+        {
+          "mark": "text",
+          "encoding": {
+            "text": {
+              "field": "EER", 
+              "aggregate": "mean", 
+              "type": "quantitative",
+              "format": ".2f"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "transform": [
+        {"filter": {"field": "backend", "equal": "LCNN-attention"}},
+        {"filter": {"field": "frontend", "equal": "LDFCC"}}
+      ],
+      "height": {"step": 25},
+      "encoding": {
+        "y": {
+          "field": "activation", 
+          "type": "ordinal",
+          "title": "LFCC"
+        },
+        "x": {
+          "field": "index", 
+          "type": "ordinal", 
+          "title": null,
+          "axis": {"labels": false, "ticks": false}
+        }
+      },
+      "layer": [
+        {
+          "mark": "rect",
+          "encoding": {
+            "fill": {
+              "field": "EER",
+              "type": "quantitative",
+              "scale": {"scheme": "lightorange"}
+            }
+          }
+        },
+        {
+          "mark": "text",
+          "encoding": {
+            "text": {
+              "field": "EER", 
+              "aggregate": "mean", 
+              "type": "quantitative",
+              "format": ".2f"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "transform": [
+        {"filter": {"field": "backend", "equal": "LCNN-trim-pad"}},
+        {"filter": {"field": "frontend", "equal": "LDFCC"}}
+      ],
+      "height": {"step": 25},
+      "encoding": {
+        "y": {
+          "field": "activation", 
+          "type": "ordinal", 
+          "title": null,
+          "axis": {"labels": false, "ticks": false}
+        },
+        "x": {
+          "field": "index", 
+          "type": "ordinal", 
+          "title": null,
+          "axis": {"labels": false, "ticks": false}
+        }
+      },
+      "layer": [
+        {
+          "mark": "rect",
+          "encoding": {
+            "fill": {
+              "field": "EER",
+              "type": "quantitative",
+              "scale": {"scheme": "lightorange"}
+            }
+          }
+        },
+        {
+          "mark": "text",
+          "encoding": {
+            "text": {
+              "field": "EER", 
+              "aggregate": "mean", 
+              "type": "quantitative",
+              "format": ".2f"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "transform": [
+        {"filter": {"field": "backend", "equal": "LCNN-LSTM-sum"}},
+        {"filter": {"field": "frontend", "equal": "LDFCC"}}
+      ],
+      "height": {"step": 25},
+      "encoding": {
+        "y": {
+          "field": "activation", 
+          "type": "ordinal", 
+          "title": null,
+          "axis": {"labels": false, "ticks": false}
+        },
+        "x": {
+          "field": "index", 
+          "type": "ordinal", 
+          "title": null,
+          "axis": {"labels": false, "ticks": false}
+        }
+      },
+      "layer": [
+        {
+          "mark": "rect",
+          "encoding": {
+            "fill": {
+              "field": "EER",
+              "type": "quantitative",
+              "scale": {"scheme": "lightorange"}
+            }
+          }
+        },
+        {
+          "mark": "text",
+          "encoding": {
+            "text": {
+              "field": "EER", 
+              "aggregate": "mean", 
+              "type": "quantitative",
+              "format": ".2f"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axis": {
+      "grid": true, 
+      "tickBand": "extent"
+    },
+    "axisX": {
+      "labelAngle": 0
+    },
+    "range":{
+      "category":"width"
+    },
+    "view": {"step": 35},
+    "concat": {
+      "spacing": 3,
+      "columns": 3
+    }
+  }
+}

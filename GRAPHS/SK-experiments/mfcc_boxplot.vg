@@ -1,0 +1,115 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "./mfcc.json"},
+  "vconcat": [
+    {
+      "mark": {"type": "boxplot", "extent": 1.5},
+      "transform": [{"filter": {"field": "frontend", "equal": "MAFCC"}}],
+      "width": 160,
+      "height": 140,
+      "encoding": {
+        "x": {
+          "field": "activation",
+          "type": "nominal",
+          "title": null,
+          "axis": {"labels": false, "ticks": false}
+        },
+        "y": {
+          "field": "EER",
+          "type": "quantitative",
+          "title": "EER (%) - Ascendent",
+          "scale": {"zero": false, "domain": [1.5, 11.5], "bins": {"step": 0.5}}
+        },
+        "column": {
+          "field": "backend",
+          "type": "nominal",
+          "title": null,
+          "spacing": 5
+        },
+        "size": {"value": 25},
+        "color": {
+          "field": "activation",
+          "type": "nominal",
+          "title": "Activation",
+          "legend": {"orient": "bottom"}
+        }
+      }
+    },
+    {
+      "mark": {"type": "boxplot", "extent": 1.5},
+      "transform": [{"filter": {"field": "frontend", "equal": "MCFCC"}}],
+      "width": 160,
+      "height": 140,
+      "encoding": {
+        "x": {
+          "field": "activation",
+          "type": "nominal",
+          "title": null,
+          "axis": {"labels": false, "ticks": false}
+        },
+        "y": {
+          "field": "EER",
+          "type": "quantitative",
+          "title": "EER (%) - Constant",
+          "scale": {"zero": false, "domain": [1.5, 11.5], "bins": {"step": 0.5}}
+        },
+        "column": {
+          "field": "backend",
+          "type": "nominal",
+          "title": null,
+          "header": null,
+          "spacing": 5
+        },
+        "size": {"value": 25},
+        "color": {
+          "field": "activation",
+          "type": "nominal",
+          "title": "Activation",
+          "legend": {"orient": "bottom"}
+        }
+      }
+    },
+    {
+      "mark": {"type": "boxplot", "extent": 1.5},
+      "transform": [{"filter": {"field": "frontend", "equal": "MDFCC"}}],
+      "width": 160,
+      "height": 140,
+      "encoding": {
+        "x": {
+          "field": "activation",
+          "type": "nominal",
+          "title": null,
+          "axis": {"labels": false, "ticks": false}
+        },
+        "y": {
+          "field": "EER",
+          "type": "quantitative",
+          "title": "EER (%) - Descendant",
+          "scale": {"zero": false, "domain": [1.5, 11.5], "bins": {"step": 0.5}}
+        },
+        "column": {
+          "field": "backend",
+          "type": "nominal",
+          "title": null,
+          "header": null,
+          "spacing": 5
+        },
+        "size": {"value": 25},
+        "color": {
+          "field": "activation",
+          "type": "nominal",
+          "title": "Activation",
+          "legend": {"orient": "bottom"}
+        }
+      }
+    }
+  ],
+  "config": {
+    "title": {"anchor": "middle", "offset": 20},
+    "concat": {"spacing": 2}
+  },
+  "resolve": {
+    "scale": {"x": "independent", "y": "independent"},
+    "legend": {"fill": "independent"}
+  }
+}
